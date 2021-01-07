@@ -1,0 +1,10 @@
+package com.ceking.mp.mapper;
+
+/**
+ * 基于Mybatis：在mapper中编写CRUD方法，提供mapper接口对应的sql映射 文件
+ * @author cjq
+ *
+ */
+public interface EmployeeMapper {
+	
+}

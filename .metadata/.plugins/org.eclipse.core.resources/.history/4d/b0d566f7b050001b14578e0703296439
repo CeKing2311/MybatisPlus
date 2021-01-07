@@ -1,0 +1,10 @@
+package com.ceking.mp.mapper;
+
+/**
+ * 
+ * @author cjq
+ *
+ */
+public interface EmployeeMapper {
+	
+}

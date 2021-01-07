@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="org.apache.ibatis.javassist.expr.NewArray"/>
+<fullyQualifiedTypeName name="com.baomidou.mybatisplus.annotations.DataSource"/>
+<fullyQualifiedTypeName name="javax.sql.DataSource"/>
+<fullyQualifiedTypeName name="com.baomidou.mybatisplus.mapper.BaseMapper"/>
+<fullyQualifiedTypeName name="com.baomidou.mybatisplus.annotations.TableId"/>
+<fullyQualifiedTypeName name="com.baomidou.mybatisplus.annotations.TableName"/>
+<fullyQualifiedTypeName name="java.lang.Double"/>
+<fullyQualifiedTypeName name="com.baomidou.mybatisplus.annotations.TableField"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="com.mysql.cj.result.IntegerValueFactory"/>
+<fullyQualifiedTypeName name="org.apache.ibatis.session.RowBounds"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="java.lang.StringBuilder"/>
+<fullyQualifiedTypeName name="java.util.Arrays"/>
+<fullyQualifiedTypeName name="com.baomidou.mybatisplus.mapper.Condition"/>
+<fullyQualifiedTypeName name="com.baomidou.mybatisplus.activerecord.Model"/>
+<fullyQualifiedTypeName name="com.baomidou.mybatisplus.mapper.EntityWrapper"/>
+<fullyQualifiedTypeName name="com.baomidou.mybatisplus.generator.config.GlobalConfig"/>
+<fullyQualifiedTypeName name="com.baomidou.mybatisplus.enums.IdType"/>
+<fullyQualifiedTypeName name="com.baomidou.mybatisplus.generator.config.DataSourceConfig"/>
+<fullyQualifiedTypeName name="com.baomidou.mybatisplus.generator.config.rules.DbType"/>
+<fullyQualifiedTypeName name="com.baomidou.mybatisplus.generator.config.StrategyConfig"/>
+<fullyQualifiedTypeName name="com.baomidou.mybatisplus.generator.config.rules.NamingStrategy"/>
+<fullyQualifiedTypeName name="com.baomidou.mybatisplus.generator.config.PackageConfig"/>
+<fullyQualifiedTypeName name="com.baomidou.mybatisplus.generator.AutoGenerator"/>
+<fullyQualifiedTypeName name="java.lang.String"/>
+<fullyQualifiedTypeName name="com.ceking.mp.service.EmployeeService"/>
+<fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
+<fullyQualifiedTypeName name="org.springframework.context.ApplicationContext"/>
+<fullyQualifiedTypeName name="org.springframework.context.support.ClassPathXmlApplicationContext"/>
+<fullyQualifiedTypeName name="com.ceking.mp.mapper.EmployeeMapper"/>
+<fullyQualifiedTypeName name="org.junit.Test"/>
+<fullyQualifiedTypeName name="com.ceking.mp.beans.Employee"/>
+<fullyQualifiedTypeName name="com.baomidou.mybatisplus.plugins.Page"/>
+</qualifiedTypeNameHistroy>
