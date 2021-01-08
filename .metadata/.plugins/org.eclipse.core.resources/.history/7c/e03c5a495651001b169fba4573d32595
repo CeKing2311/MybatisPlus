@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:jdbc="http://www.springframework.org/schema/jdbc"
+	xmlns:mybatis-spring="http://mybatis.org/schema/mybatis-spring"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/jdbc http://www.springframework.org/schema/jdbc/spring-jdbc-4.3.xsd
+		http://mybatis.org/schema/mybatis-spring http://mybatis.org/schema/mybatis-spring-1.2.xsd
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd
+		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.3.xsd">
+	<!-- spring配置 -->
+	
+	
+	
+	<!--数据源  -->
+	<context:property-placeholder location="classpath:jdbc.properties" />
+	
+	<bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource">
+		<property name="driverClass" value="${jdbc.driverClass}"></property>
+		<property name="jdbcUrl" value="${jdbc.url}"></property>
+		<property name="user" value="${jdbc.username}"></property>
+		<property name="password" value="${jdbc.password}"></property>
+	</bean>
+	
+	<!-- 事务管理器 -->
+	<bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+		<property name="dataSource" ref="dataSource"></property>	
+	</bean>
+	<!-- 基于注解的事务管理 -->
+	<tx:annotation-driven transaction-manager="transactionManager" />
+	
+	<!-- 配置MybatisSqlSessionFactoryBean,集成MyBatisPlus -->
+	<bean id="sqlSessionFactoryBean" class="com.baomidou.mybatisplus.spring.MybatisSqlSessionFactoryBean">
+		<!-- 数据源 -->
+		<property name="dataSource" ref="dataSource"></property>
+		<property name="configLocation" value="classpath:mybatis-config.xml"></property>
+		<!-- 别名处理 -->
+		<property name="typeAliasesPackage" value="com.ceking.mp.beans"></property>
+		<!-- 注入全局MybatisPlus配置策略 -->
+		<property name="globalConfig" ref="globalConfiguration"></property>		
+		<!-- 插件注册 -->
+		<property name="plugins">
+			<list>
+				<!-- 注册分页插件 -->
+				<bean class="com.baomidou.mybatisplus.plugins.PaginationInterceptor"></bean>
+				<!-- 注册执行分析插件，分析DELETE、UPDATE操作,建议开发环境使用，生存环境不建议使用 -->
+				<bean class="com.baomidou.mybatisplus.plugins.SqlExplainInterceptor">
+					<property name="stopProceed" value="true"></property>
+				</bean>
+				<!-- 注册性能分析插件 -->
+				<bean class="com.baomidou.mybatisplus.plugins.PerformanceInterceptor">
+					<!-- SQL停止执行时间 -->
+					<property name="maxTime" value="200"></property>
+					<!-- SQL语句格式化 -->
+					<property name="format" value="true"></property>
+				</bean>
+				<!-- 注册乐观锁插件 -->
+				<bean class="com.baomidou.mybatisplus.plugins.OptimisticLockerInterceptor"></bean>
+			</list>
+		</property>
+		
+	</bean>
+	<!-- MybatisPlus 全局配置策略 -->
+	<bean id="globalConfiguration" class="com.baomidou.mybatisplus.entity.GlobalConfiguration">
+		<!--mybatisplus2.3版本及以上,默认为true -->
+		<property name="dbColumnUnderline" value="true"></property>
+		<!-- 全局的注解策略 -->
+		<property name="idType" value="0"></property>
+		<!-- 全局的表前缀策略 -->
+		<property name="tablePrefix" value="t_"></property>
+	</bean>
+	
+	<!-- 定义自定义注入器 -->
+	
+	
+	
+	<!-- 配置mybatis接口扫描的路径 -->
+	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+		<property name="basePackage" value="com.ceking.mp.mapper"></property>	
+	</bean>
+	
+</beans>

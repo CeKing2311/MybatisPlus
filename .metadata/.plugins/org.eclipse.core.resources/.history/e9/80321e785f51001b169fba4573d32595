@@ -1,0 +1,26 @@
+package com.ceking.mp.metaobjecthandler;
+
+import org.apache.ibatis.reflection.MetaObject;
+
+import com.baomidou.mybatisplus.mapper.MetaObjectHandler;
+
+/**
+ * 自定义的公共字段填充处理器
+ * @author cjq
+ *
+ */
+public class MyMetaObjectHandler extends  MetaObjectHandler {
+
+	@Override
+	public void insertFill(MetaObject metaObject) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void updateFill(MetaObject metaObject) {
+		// TODO Auto-generated method stub
+		
+	}
+	
+}

@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="TestMP.testOptimisticLocker" project="mppagehelper" tests="1" started="1" failures="0" errors="0" ignored="0">
+  <testcase name="testOptimisticLocker" classname="com.ceking.mp.test.TestMP" time="0.085"/>
+</testrun>

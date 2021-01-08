@@ -1,0 +1,13 @@
+package com.ceking.mp.injector;
+
+import com.baomidou.mybatisplus.mapper.AutoSqlInjector;
+
+/**
+ * 自定义全局操作
+ * @author cjq
+ *
+ */
+public class MySqlInjector extends AutoSqlInjector {
+	
+	
+}

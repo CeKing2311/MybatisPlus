@@ -1,0 +1,5 @@
+package com.ceking.mp.mapper;
+
+public interface UserMapper {
+
+}

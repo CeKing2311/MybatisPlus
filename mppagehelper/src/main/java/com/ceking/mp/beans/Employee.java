@@ -6,6 +6,8 @@ import com.baomidou.mybatisplus.annotations.TableId;
 import com.baomidou.mybatisplus.enums.IdType;
 import com.baomidou.mybatisplus.activerecord.Model;
 import com.baomidou.mybatisplus.annotations.TableName;
+import com.baomidou.mybatisplus.annotations.Version;
+
 import java.io.Serializable;
 
 /**
@@ -28,8 +30,20 @@ public class Employee extends Model<Employee> {
     private String gender;
     private Integer age;
 
+    @Version
+    private Integer version;
+    
+    
+    
+    public Integer getVersion() {
+		return version;
+	}
 
-    public Integer getId() {
+	public void setVersion(Integer version) {
+		this.version = version;
+	}
+
+	public Integer getId() {
         return id;
     }
 
